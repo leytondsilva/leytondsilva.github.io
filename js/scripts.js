@@ -122,6 +122,20 @@
         $(this).addClass('active');
         $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
     });
+    $('a.taphover').on('touchstart', function(e) {
+        'use strict'; //satisfy code inspectors
+        var index = $('.project-row a').index(this)
+        var link = $(this); //preselect the link
+        if (link.hasClass('active')) {
+            return true;
+        } else {
+            link.addClass('active');
+            $('a.taphover').not(this).removeClass('active');
+            e.preventDefault();
+            $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
+            return false; //extra, and to make sure the function has consistent return points
+        }
+    });
     if ($('.js-form').length) {
         $('.js-form').each(function() {
             $(this).validate({
