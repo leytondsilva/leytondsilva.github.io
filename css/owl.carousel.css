@@ -23,7 +23,7 @@
 .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
-    -webkit-transform: translate3d(0px,0px,0px)
+    -webkit-transform: translate3d(0px,0px,0px);
 }
 
 .owl-carousel .owl-item {
@@ -32,7 +32,7 @@
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none
+    -webkit-touch-callout: none;
 }
 
 .owl-carousel .owl-item img {
