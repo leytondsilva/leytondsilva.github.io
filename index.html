@@ -18,6 +18,22 @@
         <link href="./css/fontsMonsterRat.css" rel="stylesheet">
         <link href="./css/fontsPoppins.css" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet" media="screen">
+        
+        <audio id="myAudio">
+            <source src="sound/music.mp3" type="audio/mp3">
+        </audio>
+        <script>
+        var x = document.getElementById("myAudio"); 
+        function playAudio() { 
+            if ($('.audio').hasClass('start'))  {
+                x.pause();
+                $('.audio').removeClass('start');
+            } else {
+                x.play();
+                $('.audio').addClass('start');
+            }
+        }
+        </script>
     </head>
     <body>
         <div class="animsition">
@@ -86,7 +102,7 @@
 
             <div class="copy-bottom white boxed">© Leyton 2020.</div>
             <div class="copy-bottom white center">
-                <button class="btn-audio" type="button">
+                <button class="btn-audio" type="button" onclick="playAudio()" >
                     SOUND
                     <div class="btn-wave">
                         <span class="audio"></span>
@@ -212,7 +228,7 @@
                                                                 <div class="resume-row">
                                                                     <h6 class="resume-type">Machine Learning Intern</h6>
                                                                     <i class="resume-study">Rupeeseed Technology Ventures Private Limited<br>Dec 2019 - Jan 2020</i>
-                                                                    <p class="resume-text">1. Developed a Python Script to detect Trolls and Non-Trolls from Live Twitter Feed using Tweepy, Pandas and Machine Learning.<br><br>2. Developed a Web Application using HTML, CSS and JavaScript to Display the filtered Tweets using Django Web Framework.</p>
+                                                                    <p class="resume-text">Twitter Troll Detection</p>
                                                                 </div>
                                                                 <div class="resume-row">
                                                                     <h6 class="resume-type">Jio Intern</h6>
