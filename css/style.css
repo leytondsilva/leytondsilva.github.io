@@ -1801,6 +1801,11 @@ a.brand:hover,a.brand:focus {
     text-decoration: line-through;
     outline: none!important
 }
+@media (hover: none) { 
+    .btn-audio:hover {
+        text-decoration: none;
+    }
+}
 .btn-wave {
     position: relative;
     margin-left: 75px;
