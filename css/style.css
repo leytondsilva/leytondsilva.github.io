@@ -235,7 +235,7 @@ label.error {
 }
 
 .btn:hover,.btn:focus {
-    background-color: #f5468b;
+    background-color: skyblue;
     color: #fff;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -787,6 +787,12 @@ a.brand:hover,a.brand:focus {
 
 .copy-bottom.white {
     color: #fff
+}
+
+.copy-bottom.center {
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 #pp-nav {
@@ -1509,7 +1515,7 @@ a.brand:hover,a.brand:focus {
     width: 138px;
     height: 276px;
     margin-right: 5.75rem;
-    background: url(../images/bg/quote.png) no-repeat
+    background: url(./images/bg/quote.png) no-repeat
 }
 
 .review-row {
@@ -1770,3 +1776,5 @@ a.brand:hover,a.brand:focus {
         display: block
     }
 }
+
+/*Sound Button*/

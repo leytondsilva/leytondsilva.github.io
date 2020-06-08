@@ -43,11 +43,7 @@
     $('.close-menu, .click-capture, .menu-list li a').on('click', function() {
         $('body').removeClass('menu-is-opened').addClass('menu-is-closed');
         $('.menu-list ul').slideUp(300);
-    });
-    $('.menu-list li a').on('click', function() {
-        $('.menu-list li').removeClass('active');
-        $(this).closest('li').addClass('active');
-    });
+    });    
     $('.col-resume').on('mouseover', function() {
         $('.section-bg.mask').addClass('hide');
     });
@@ -73,6 +69,15 @@
             dots: true
         });
     }
+    function menulist() {
+        var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+        $('.menu-list li').removeClass('active');
+        $('.menu-list li a').each(function() {
+            if (this.href === path) {
+                $(this).closest('li').addClass('active');
+            }
+        });
+    }
     function navbarFullpage() {
         if ($('.pp-section.active').scrollTop() > 0) {
             $('.navbar-fullpage').addClass('navbar-fixed');
@@ -95,9 +100,10 @@
         $('.pagepiling').pagepiling({
             scrollingSpeed: 280,
             loopBottom: true,
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
             afterLoad: function(anchorLink, index) {
                 navbarFullpage();
+                menulist();
             }
         });
     }
@@ -122,6 +128,7 @@
         $(this).addClass('active');
         $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
     });
+    /*touch screen mouseover to click project-section*/
     $('a.taphover').on('touchstart', function(e) {
         'use strict'; //satisfy code inspectors
         var index = $('.project-row a').index(this)
