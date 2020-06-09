@@ -1,4 +1,12 @@
-@import 'bootstrap.min.css';@import 'bootstrap-grid.min.css';@import 'animate.css';@import 'ionicons.min.css';@import 'linearicons.css';@import 'animsition.css';@import 'magnific-popup.css';@import 'jquery.pagepiling.css';@import 'owl.carousel.css';html {
+@import 'bootstrap.min.css';
+@import 'bootstrap-grid.min.css';
+@import 'animate.css';
+@import 'ionicons.min.css';
+@import 'linearicons.css';
+@import 'animsition.css';
+@import 'magnific-popup.css';
+@import 'jquery.pagepiling.css';
+html {
     font-size: 12px;
     -webkit-font-smoothing: antialiased
 }
