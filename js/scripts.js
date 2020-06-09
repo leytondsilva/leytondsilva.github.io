@@ -100,7 +100,7 @@
         $('.pagepiling').pagepiling({
             scrollingSpeed: 280,
             loopBottom: true,
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+            anchors: ['Home', 'AboutMe', 'Resume', 'Projects', 'Contact'],
             afterLoad: function(anchorLink, index) {
                 navbarFullpage();
                 menulist();

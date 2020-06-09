@@ -245,7 +245,9 @@ label.error {
 .icon {
     display: inline-block
 }
-
+.img-icon :hover{
+    filter: invert(32%) sepia(11%) saturate(1660%) hue-rotate(158deg) brightness(50%) contrast(93%);
+}
 .ion-ios-play {
     position: relative;
     width: 5rem;
@@ -512,7 +514,7 @@ a.brand:hover,a.brand:focus {
     position: absolute;
     z-index: 10;
     right: 0;
-    bottom: 2.4rem;
+    bottom: 2.7rem;
     color: #000
 }
 
