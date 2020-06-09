@@ -1796,7 +1796,7 @@ a.brand:hover,a.brand:focus {
 }
 
 
-@media (btn-audio: hover) { 
+@media (hover: hover) { 
     .btn-audio:hover{
         background-color:inherit;
         color: #fff;
