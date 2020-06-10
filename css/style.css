@@ -1844,6 +1844,7 @@ span.audio {
     bottom: 0px;
     width: 5px;
     height: 5px;
+    border-radius:2.5px;
     background: #35586C;
     position: absolute;
 }
