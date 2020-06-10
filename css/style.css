@@ -1796,34 +1796,54 @@ a.brand:hover,a.brand:focus {
     border: 0;
     border-radius: 0;
     padding-right: 70px;
-    background-color: inherit;
+    background-color: transparent;
     text-decoration: none;
     -webkit-transition: all .3s ease-out!important;
     transition: all .3s ease-out!important;
     outline: none!important
 }
-
-
-@media (hover: hover) { 
-    .btn-audio:hover{
-        background-color:inherit;
-        color: #fff;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        text-decoration: line-through;
-        outline: none!important
+.btn-audio:before, .btn-audio:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+    z-index: 11;
+}
+  
+.btn-audio:before {
+    left: -2.5px;
+}
+.btn-audio:after {
+    right: 2.5px;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+@media (hover:hover){
+    .btn-audio:hover:before {
+        background: white;
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    .btn-audio:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
     }
 }
+
 .btn-wave {
     position: relative;
     margin-left: 75px;
-    bottom: 0.8rem;
+    bottom: 0.845rem;
 }
 span.audio {
     display: inline-flex;
     bottom: 0px;
     width: 5px;
-    height: 4px;
+    height: 5px;
     background: #35586C;
     position: absolute;
 }
