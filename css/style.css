@@ -1876,6 +1876,6 @@ span.audio:nth-child(5) {
     25% {height:12px;transform:translateY(6px);background:#35586C;}
     50% {height:24px;transform:translateY(12px);background:lightblue;}
     75% {height:12px;transform:translateY(6px);background:#35586C;}
-    100% {height:4px;transform:translateY(px);background:#35586C;}
+    100% {height:4px;transform:translateY(0px);background:#35586C;}
 }
   
