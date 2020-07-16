@@ -252,7 +252,10 @@ label.error {
 
 .icon {
     display: inline-block;
-    vertical-align: middle;
+}
+.img-icon{
+    padding-top: 1.78px;
+    padding-bottom: 1.78px;
 }
 .img-icon :hover{
     filter: invert(32%) sepia(11%) saturate(1660%) hue-rotate(158deg) brightness(50%) contrast(93%);
@@ -290,6 +293,7 @@ label.error {
 }
 .ion-social-linkedin {
     color: white!important;
+    font-size: 24px!important;
 }
 .ion-social-linkedin:hover {
     color: #35586C!important;
