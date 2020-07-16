@@ -251,7 +251,8 @@ label.error {
 }
 
 .icon {
-    display: inline-block
+    display: inline-block;
+    vertical-align: middle;
 }
 .img-icon :hover{
     filter: invert(32%) sepia(11%) saturate(1660%) hue-rotate(158deg) brightness(50%) contrast(93%);
@@ -287,7 +288,12 @@ label.error {
     background: #fff;
     margin-right: 2rem
 }
-
+.ion-social-linkedin {
+    color: white!important;
+}
+.ion-social-linkedin:hover {
+    color: #35586C!important;
+}
 .animsition {
     position: absolute;
     z-index: 1000;
