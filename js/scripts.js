@@ -126,10 +126,16 @@
         var index = $('.project-row a').index(this)
         $('.project-row a').removeClass('active');
         $(this).addClass('active');
-        $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
+        $('.bg-changer1 .section-bg').removeClass('active').eq(index).addClass('active');
+    });
+    $('.webapp-row a').on('mouseover', function() {
+        var index = $('.webapp-row a').index(this)
+        $('.webapp-row a').removeClass('active');
+        $(this).addClass('active');
+        $('.bg-changer2 .section-bg').removeClass('active').eq(index).addClass('active');
     });
     /*touch screen mouseover to click project-section*/
-    $('a.taphover').on('touchstart', function(e) {
+    $('.project-row a.taphover').on('touchstart', function(e) {
         'use strict'; //satisfy code inspectors
         var index = $('.project-row a').index(this)
         var link = $(this); //preselect the link
@@ -137,9 +143,23 @@
             return true;
         } else {
             link.addClass('active');
-            $('a.taphover').not(this).removeClass('active');
+            $('.project-row a.taphover').not(this).removeClass('active');
             e.preventDefault();
-            $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
+            $('.bg-changer1 .section-bg').removeClass('active').eq(index).addClass('active');
+            return false; //extra, and to make sure the function has consistent return points
+        }
+    });
+    $('.webapp-row a.taphover').on('touchstart', function(e) {
+        'use strict'; //satisfy code inspectors
+        var index = $('.webapp-row a').index(this)
+        var link = $(this); //preselect the link
+        if (link.hasClass('active')) {
+            return true;
+        } else {
+            link.addClass('active');
+            $('.webapp-row a.taphover').not(this).removeClass('active');
+            e.preventDefault();
+            $('.bg-changer2 .section-bg').removeClass('active').eq(index).addClass('active');
             return false; //extra, and to make sure the function has consistent return points
         }
     });
